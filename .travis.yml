@@ -5,4 +5,4 @@ before_install:
    - docker build -t godfather0309/frontend -f Dockerfile.dev .
 
 scripts:
-   - docker run godfather0309/frontend npm run test -- --coverage
+   - docker run -e CI=true godfather0309/frontend npm run test
